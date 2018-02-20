@@ -1,6 +1,5 @@
 public class Stack<E> {
 	private Node<E> head;
-	private Node<E> tail;
 	private int size;
 	
 	/*
@@ -40,7 +39,6 @@ public class Stack<E> {
 		Node<E> node = new Node<E>(element);
 		if( head == null ) {
 			head = node;
-			tail = node;
 			++size;
 		} else {
 		    node.next = head;

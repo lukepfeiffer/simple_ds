@@ -6,10 +6,12 @@
 public class HashMap<V> {
 	private V [] values;
 	
+	@SuppressWarnings("unchecked")
 	public HashMap(int size){
 		values = (V[])new Object[size];;
 	}
 	
+	@SuppressWarnings("unchecked")
 	public HashMap(){
 		values = (V[])new Object[20];;
 	}
@@ -28,6 +30,7 @@ public class HashMap<V> {
 		} else {
 			//If collision, double size of array and copy contents
 			int length = values.length*2;
+			@SuppressWarnings("unchecked")
 			V [] array = (V[])new Object[length];
 			copyContents(array);
 			this.values = array;
