@@ -46,4 +46,10 @@ class QueueTest {
 		assertEquals(Integer.valueOf(30), queue.remove().getData());
 		assertEquals(Integer.valueOf(40), queue.remove().getData());
 	}
+	
+	@Test
+	void emptyTest() {
+		Queue<Integer> queue = new Queue<Integer>(3);
+		
+	}
 }
