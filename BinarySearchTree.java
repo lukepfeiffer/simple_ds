@@ -49,9 +49,31 @@ public class BinarySearchTree{
 		return depth;
 	}
 	
-	public String inOrderSearch() {
-		String returnString = "";
-		Stack<BNode> stack = new Stack<BNode>();
-		return returnString;
+	public BNode getRoot() {
+		return root;
+	}
+	
+	public void inOrderTraversal(BNode node) {
+		if( node != null ) {
+			inOrderTraversal(node.getLeft());
+			System.out.print(node.getData() + "->");
+			inOrderTraversal(node.getRight());
+		}
+	}
+	
+	public void preOrderTraversal(BNode node) {
+		if( node != null ) {
+			System.out.print(node.getData() + "->");
+			inOrderTraversal(node.getLeft());
+			inOrderTraversal(node.getRight());
+		}
+	}
+	
+	public void postOrderTraversal(BNode node) {
+		if( node != null ) {
+			inOrderTraversal(node.getLeft());
+			inOrderTraversal(node.getRight());
+			System.out.print(node.getData() + "->");
+		}
 	}
 }
